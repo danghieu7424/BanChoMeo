@@ -50,7 +50,7 @@ module.exports = {
   ],
   devServer: {
     static: path.resolve(__dirname, "public"), // Thư mục tĩnh
-    port: 8800, // Cổng chạy server
+    port: 8080, // Cổng chạy server
     open: true, // Mở trình duyệt khi chạy
     hot: true, // Bật chế độ hot-reload
     historyApiFallback: true, // Điều hướng tất cả các route về index.html

@@ -36,7 +36,6 @@ body {
 .page-container {
   position: relative;
   top: calc(4rem + .0625rem);
-  width: 100%;
-  min-width: 700px;
-  height: calc(100dvh - 4.0625rem);
+  min-width: 100%;
+  min-height: calc(100dvh - 4.0625rem);
 }

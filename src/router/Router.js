@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { TransitionProvider } from '../context/TransitionContext';
 import TransitionComponent from '../components/Transition.jsx';
+import ServicesPage from '../components/servicesPage.jsx';
 
 import HomePage from '../components/homePage.jsx';
 
@@ -16,6 +17,14 @@ const Router = () => {
           element={
             <TransitionComponent>
               <HomePage />
+            </TransitionComponent>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <TransitionComponent>
+              <ServicesPage />
             </TransitionComponent>
           }
         />

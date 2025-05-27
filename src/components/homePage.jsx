@@ -23,25 +23,27 @@ import dog7 from "../access/img/pet/Chó/labra.png";
 import dog8 from "../access/img/pet/Chó/pitbull.png";
 import dog9 from "../access/img/pet/Chó/shiba.png";
 
-const obgectPet = [
+const CatPet = [
   { img: cat1, size: "90%", name: "Mèo anh lông dài", price: 1000 },
   { img: cat2, size: "100%", name: "Mèo bengal", price: 2000 },
   { img: cat3, size: "100%", name: "Mèo siêm", price: 3000 },
   { img: cat4, size: "100%", name: "Mèo chân ngắn", price: 4000 },
   { img: cat5, size: "100%", name: "Mèo tai cụp", price: 5000 },
-  { img: cat6, size: "100%", name: "Mèo Sphynx", price: 6000 },
-  { img: cat7, size: "100%", name: "Mèo cam", price: 7000 },
-  { img: cat8, size: "100%", name: "Mèo maincoon", price: 8000 },
-  { img: cat9, size: "90%", name: "Mèo ragdoll", price: 9000 },
+  // { img: cat6, size: "100%", name: "Mèo Sphynx", price: 6000 },
+  // { img: cat7, size: "100%", name: "Mèo cam", price: 7000 },
+  // { img: cat8, size: "100%", name: "Mèo maincoon", price: 8000 },
+  // { img: cat9, size: "90%", name: "Mèo ragdoll", price: 9000 },
+];
+const DogPet = [
   { img: dog1, size: "100%", name: "Chó phốc sóc", price: 1000 },
   { img: dog2, size: "100%", name: "Chó alaska", price: 2000 },
   { img: dog3, size: "100%", name: "Chó bec_duc", price: 3000 },
   { img: dog4, size: "100%", name: "Chó corgi", price: 4000 },
   { img: dog5, size: "100%", name: "Chó golden", price: 5000 },
-  { img: dog6, size: "50%", name: "Chó husky", price: 6000 },
-  { img: dog7, size: "60%", name: "Chó labra", price: 7000 },
-  { img: dog8, size: "95%", name: "Chó pitbull", price: 8000 },
-  { img: dog9, size: "125%", name: "Chó shiba", price: 9000 },
+  // { img: dog6, size: "50%", name: "Chó husky", price: 6000 },
+  // { img: dog7, size: "60%", name: "Chó labra", price: 7000 },
+  // { img: dog8, size: "95%", name: "Chó pitbull", price: 8000 },
+  // { img: dog9, size: "125%", name: "Chó shiba", price: 9000 },
 ];
 
 gsap.registerPlugin(InertiaPlugin);
@@ -138,10 +140,48 @@ export default function HomePage() {
       </div>
 
       <div className="home-page-content">
-        <h1>Welcome to the Home Page</h1>
+        <h1>Danh sách thú cưng mèo</h1>
         <div className="content">
           <ul>
-            {obgectPet.map((pet, index) => (
+            {CatPet.map((pet, index) => (
+              <li className="product">
+                <div className="product-item">
+                  <div className="product-image">
+                    <div className="product-img-bg"></div>
+                    <div
+                      className="product-img-subject"
+                      style={{
+                        backgroundImage: `
+                            url(${pet.img})`,
+                        backgroundSize: pet.size,
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                    ></div>
+                  </div>
+                  <div className="product-name">{pet.name}</div>
+                  <div className="product-price">${pet.price}</div>
+                  <button className="product-button">Đặt hàng</button>
+                </div>
+              </li>
+            ))}
+            <li>
+              <button
+              className="product-button-more"
+                onClick={() => {
+                  window.location.href = "/product/cat";
+                }}
+              >
+               Xem thêm
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1>Danh sách thú cưng chó</h1>
+
+        <div className="content">
+          <ul>
+            {DogPet.map((pet, index) => (
               <li className="product">
                 <div className="product-item">
                   <div className="product-image">
@@ -168,7 +208,7 @@ export default function HomePage() {
       </div>
 
       <div className="home-page-footer">
-        <p>&copy; 2023 Your Company</p>
+        <p>&copy; Công ty TNHH 2 thành viên</p>
       </div>
     </div>
   );
