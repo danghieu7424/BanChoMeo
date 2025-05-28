@@ -12,10 +12,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, useGSAP);
 
 function App() {
   const location = useLocation();
+  const isLoginPage = location.pathname === '/login' || location.pathname === '/change-password';
   
   return (
     <>
-      <Header />
+      {!isLoginPage && <Header />}
       <Router />
     </>
   );

@@ -52,14 +52,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
             .service-image {
-              .service-img-bg {
-                transform: perspective(1024px) rotateX(20deg);
-                transform-origin: bottom center;
-                border-radius: 25% 25% 0.375rem 0.375rem;
-              }
-
               .service-img-subject {
-                transform: translateY(-10px) scale(1.05);
+                transform: scale(1.01);
               }
             }
           }

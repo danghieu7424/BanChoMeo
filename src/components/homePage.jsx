@@ -23,27 +23,60 @@ import dog7 from "../access/img/pet/Chó/labra.png";
 import dog8 from "../access/img/pet/Chó/pitbull.png";
 import dog9 from "../access/img/pet/Chó/shiba.png";
 
+import dogS1 from "../access/img/dog_service/dog_food_1.jpg";
+import dogS2 from "../access/img/dog_service/dog_food_2.jpg";
+import dogS3 from "../access/img/dog_service/dog_food_1.png";
+import dogS4 from "../access/img/dog_service/dog_food_2.png";
+import dogS5 from "../access/img/dog_service/dog_food_3.png";
+import dogS6 from "../access/img/dog_service/dog_food_4.png";
+import dogS7 from "../access/img/dog_service/dog_food_1.webp";
+import dogS8 from "../access/img/dog_service/dog_food_2.webp";
+import dogS9 from "../access/img/dog_service/dog_food_3.webp";
+
+import catS1 from "../access/img/cat_service/cat_food_1.webp";
+import catS2 from "../access/img/cat_service/cat_food_2.webp";
+import catS3 from "../access/img/cat_service/cat_food_1.png";
+import catS4 from "../access/img/cat_service/cat_food_2.png";
+import catS5 from "../access/img/cat_service/cat_food_3.png";
+import catS6 from "../access/img/cat_service/cat_food_4.png";
+
 const CatPet = [
-  { img: cat1, size: "90%", name: "Mèo anh lông dài", price: 1000 },
-  { img: cat2, size: "100%", name: "Mèo bengal", price: 2000 },
-  { img: cat3, size: "100%", name: "Mèo siêm", price: 3000 },
-  { img: cat4, size: "100%", name: "Mèo chân ngắn", price: 4000 },
-  { img: cat5, size: "100%", name: "Mèo tai cụp", price: 5000 },
-  // { img: cat6, size: "100%", name: "Mèo Sphynx", price: 6000 },
-  // { img: cat7, size: "100%", name: "Mèo cam", price: 7000 },
-  // { img: cat8, size: "100%", name: "Mèo maincoon", price: 8000 },
-  // { img: cat9, size: "90%", name: "Mèo ragdoll", price: 9000 },
+  { img: cat1, size: "90%", name: "Mèo anh lông dài", price: "1.400.000₫" },
+  { img: cat2, size: "100%", name: "Mèo bengal", price: "2.000.000₫" },
+  { img: cat3, size: "100%", name: "Mèo siêm", price: "2.500.000₫" },
+  { img: cat4, size: "100%", name: "Mèo chân ngắn", price: "4.000.000₫" },
+  { img: cat5, size: "100%", name: "Mèo tai cụp", price: "5.000.000₫" },
+  // { img: cat6, size: "100%", name: "Mèo Sphynx", price: "5.000.000₫" },
+  // { img: cat7, size: "100%", name: "Mèo cam", price: "3.000.000₫" },
+  // { img: cat8, size: "100%", name: "Mèo maincoon", price: "2.000.000₫" },
+  // { img: cat9, size: "90%", name: "Mèo ragdoll", price: "4.000.000₫" },
 ];
 const DogPet = [
-  { img: dog1, size: "100%", name: "Chó phốc sóc", price: 1000 },
-  { img: dog2, size: "100%", name: "Chó alaska", price: 2000 },
-  { img: dog3, size: "100%", name: "Chó bec_duc", price: 3000 },
-  { img: dog4, size: "100%", name: "Chó corgi", price: 4000 },
-  { img: dog5, size: "100%", name: "Chó golden", price: 5000 },
-  // { img: dog6, size: "50%", name: "Chó husky", price: 6000 },
-  // { img: dog7, size: "60%", name: "Chó labra", price: 7000 },
-  // { img: dog8, size: "95%", name: "Chó pitbull", price: 8000 },
-  // { img: dog9, size: "125%", name: "Chó shiba", price: 9000 },
+  { img: dog1, size: "100%", name: "Chó phốc sóc", price: "1.600.000₫" },
+  { img: dog2, size: "100%", name: "Chó alaska", price: "2.700.000₫" },
+  { img: dog3, size: "100%", name: "Chó bec_duc", price: "4.300.000₫" },
+  { img: dog4, size: "100%", name: "Chó corgi", price: "3.200.000₫" },
+  { img: dog5, size: "100%", name: "Chó golden", price: "5.600.000₫" },
+  // { img: dog6, size: "50%", name: "Chó husky", price: "2.500.000₫" },
+  // { img: dog7, size: "60%", name: "Chó labra", price: "4.600.000₫" },
+  // { img: dog8, size: "95%", name: "Chó pitbull", price: "5.500.000₫" },
+  // { img: dog9, size: "125%", name: "Chó shiba", price: "3.000.000₫" },
+];
+
+const DogService = [
+  { img: dogS1, name: "Dịch vụ 1", price: "500.000₫" },
+  { img: dogS2, name: "Dịch vụ 2", price: "600.000₫" },
+  { img: dogS3, name: "Dịch vụ 3", price: "700.000₫" },
+  { img: dogS4, name: "Dịch vụ 4", price: "800.000₫" },
+  { img: dogS5, name: "Dịch vụ 5", price: "900.000₫" },
+];
+
+const CatService = [
+  { img: catS1, name: "Dịch vụ 1", price: "500.000₫" },
+  { img: catS2, name: "Dịch vụ 2", price: "600.000₫" },
+  { img: catS3, name: "Dịch vụ 3", price: "700.000₫" },
+  { img: catS4, name: "Dịch vụ 4", price: "800.000₫" },
+  { img: catS5, name: "Dịch vụ 5", price: "900.000₫" },
 ];
 
 gsap.registerPlugin(InertiaPlugin);
@@ -140,11 +173,11 @@ export default function HomePage() {
       </div>
 
       <div className="home-page-content">
-        <h1>Danh sách thú cưng mèo</h1>
-        <div className="content">
+        <h1>Giống mèo tiêu biểu</h1>
+        <div className="content-product">
           <ul>
             {CatPet.map((pet, index) => (
-              <li className="product">
+              <li className="product" key={index}>
                 <div className="product-item">
                   <div className="product-image">
                     <div className="product-img-bg"></div>
@@ -160,29 +193,28 @@ export default function HomePage() {
                     ></div>
                   </div>
                   <div className="product-name">{pet.name}</div>
-                  <div className="product-price">${pet.price}</div>
+                  <div className="product-price">{pet.price}</div>
                   <button className="product-button">Đặt hàng</button>
                 </div>
               </li>
             ))}
             <li>
               <button
-              className="product-button-more"
+                className="product-button-more"
                 onClick={() => {
                   window.location.href = "/product/cat";
                 }}
               >
-               Xem thêm
+                Xem thêm
               </button>
             </li>
           </ul>
         </div>
-        <h1>Danh sách thú cưng chó</h1>
-
-        <div className="content">
+        <h1>Giống chó tiêu biểu</h1>
+        <div className="content-product">
           <ul>
             {DogPet.map((pet, index) => (
-              <li className="product">
+              <li className="product" key={index}>
                 <div className="product-item">
                   <div className="product-image">
                     <div className="product-img-bg"></div>
@@ -198,11 +230,95 @@ export default function HomePage() {
                     ></div>
                   </div>
                   <div className="product-name">{pet.name}</div>
-                  <div className="product-price">${pet.price}</div>
+                  <div className="product-price">{pet.price}</div>
                   <button className="product-button">Đặt hàng</button>
                 </div>
               </li>
             ))}
+            <li>
+              <button
+                className="product-button-more"
+                onClick={() => {
+                  window.location.href = "/service/cat";
+                }}
+              >
+                Xem thêm
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1>Sản phẩm bán chạy cho mèo</h1>
+        <div className="content-service">
+          <ul>
+            {CatService.map((pet, index) => (
+              <li className="product-service" key={index}>
+                <div className="product-item">
+                  <div className="product-image">
+                    <div className="product-img-bg"></div>
+                    <div
+                      className="product-img-subject"
+                      style={{
+                        backgroundImage: `
+                            url(${pet.img})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                    ></div>
+                  </div>
+                  <div className="product-name">{pet.name}</div>
+                  <div className="product-price">{pet.price}</div>
+                  <button className="product-button">Đặt hàng</button>
+                </div>
+              </li>
+            ))}
+            <li>
+              <button
+                className="product-button-more"
+                onClick={() => {
+                  window.location.href = "/service/dog";
+                }}
+              >
+                Xem thêm
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1>Sản phẩm bán chạy cho chó</h1>
+        <div className="content-service">
+          <ul>
+            {DogService.map((pet, index) => (
+              <li className="product-service" key={index}>
+                <div className="product-item">
+                  <div className="product-image">
+                    <div className="product-img-bg"></div>
+                    <div
+                      className="product-img-subject"
+                      style={{
+                        backgroundImage: `
+                            url(${pet.img})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                    ></div>
+                  </div>
+                  <div className="product-name">{pet.name}</div>
+                  <div className="product-price">{pet.price}</div>
+                  <button className="product-button">Đặt hàng</button>
+                </div>
+              </li>
+            ))}
+            <li>
+              <button
+                className="product-button-more"
+                onClick={() => {
+                  window.location.href = "/product/dog";
+                }}
+              >
+                Xem thêm
+              </button>
+            </li>
           </ul>
         </div>
       </div>
