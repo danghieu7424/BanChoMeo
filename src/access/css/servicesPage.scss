@@ -1,0 +1,175 @@
+.services-page-content {
+  position: relative;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  min-height: 600px;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .services-list {
+    position: relative;
+    width: min(100%, 1024px);
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    position: relative;
+    width: 100%;
+
+    ul {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-self: start;
+      align-items: stretch;
+      flex-wrap: wrap;
+
+      li {
+        position: relative;
+        padding: 0.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .service-item {
+          position: relative;
+          width: min(100%, 250px);
+          min-height: 100%;
+          padding: 0.625rem;
+          border: 1px solid #3333;
+          border-radius: 0.375rem;
+          transition: all 0.1s ease;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          font-family: k2d, "Lexend Deca", sans-serif;
+
+          &:hover {
+            border: 1px solid #3336;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+            .service-image {
+              .service-img-bg {
+                transform: perspective(1024px) rotateX(20deg);
+                transform-origin: bottom center;
+                border-radius: 25% 25% 0.375rem 0.375rem;
+              }
+
+              .service-img-subject {
+                transform: translateY(-10px) scale(1.05);
+              }
+            }
+          }
+
+          .service-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+
+            border: 1px solid #3331;
+            border-radius: 0.25rem;
+            display: inline-block;
+
+            .service-img-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 0.375rem;
+              background: radial-gradient(
+                circle,
+                rgba(255, 227, 65, 1) 0%,
+                rgba(252, 255, 62, 1) 50%,
+                rgb(201, 219, 35) 100%
+              );
+            }
+
+            .service-img-subject {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              aspect-ratio: 1/1;
+              filter: drop-shadow(-3px 0 0 white) drop-shadow(3px 0 0 white)
+                drop-shadow(0 -3px 0px white) drop-shadow(0 3px 0px white)
+                drop-shadow(0 6px 3px rgba(0, 0, 0, 0.3));
+            }
+
+            .service-img-bg,
+            .service-img-subject {
+              transition: all 0.25s ease-in-out;
+            }
+          }
+
+          .service-name {
+            position: relative;
+            width: 100%;
+            padding: 0.625rem 0 0.0625rem 0;
+          }
+
+          .service-price {
+            position: relative;
+            width: 100%;
+            padding: 0.0625rem 0 0.625rem 0;
+          }
+
+          .service-button {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 0.375rem;
+            margin: 0.625rem 0 0;
+            color: #fff;
+            font-family: "Lexend Deca", san-serif;
+            font-size: 16px;
+            border-radius: 40px;
+            background: linear-gradient(
+                120deg,
+                #4bdb27 45%,
+                rgb(99 78 207 /0%) 45%
+              ),
+              linear-gradient(120deg, #97ff42 55%, #634ecf 55%);
+            background-size: 250%;
+            background-position: right;
+            transition: 0.3s ease-in-out;
+            overflow: visible;
+            border-radius: 0.8rem;
+            border: 1px solid #dadada;
+            box-shadow: -0.17rem -0.17rem 0.2rem #eee9,
+              0.1rem 0 0.4rem #dadada99, 0.2rem 0.2rem 0.2rem #777,
+              -0.17rem -0.17rem 0.2rem #eee inset,
+              0.2rem 0.2rem 0.2rem #dadada inset;
+            font-family: k2d, "Lexend Deca", sans-serif;
+
+            &:hover {
+              background-position: left;
+              transition: 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        li {
+          flex: 0 0 50%;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        li {
+          flex: 0 0 33.3%;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        li {
+          flex: 0 0 25%;
+        }
+      }
+    }
+  }
+}
