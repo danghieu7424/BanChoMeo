@@ -68,14 +68,14 @@ const DogService = [
   { img: dogS2, name: "Dầu thơm", price: "600.000₫" },
   { img: dogS3, name: "Sữa tắm", price: "700.000₫" },
   { img: dogS4, name: "Xúc xích", price: "200.000₫" },
-  { img: dogS5, name: "Cát", price: "900.000₫" },
+  { img: dogS5, name: "Cát cho chó", price: "900.000₫" },
 ];
 
 const CatService = [
-  { img: catS1, name: "Cát", price: "500.000₫" },
-  { img: catS2, name: "Cát", price: "600.000₫" },
-  { img: catS3, name: "Cát gỗ", price: "700.000₫" },
-  { img: catS4, name: "Cát gỗ", price: "800.000₫" },
+  { img: catS1, name: "Cát cho mèo Reflex", price: "500.000₫" },
+  { img: catS2, name: "Cát cho mèo Reflex", price: "600.000₫" },
+  { img: catS3, name: "Cát gỗ Catfee", price: "700.000₫" },
+  { img: catS4, name: "Cát gỗ Catfee", price: "800.000₫" },
   { img: catS5, name: "Xẻng xúc phân", price: "100.000₫" },
 ];
 gsap.registerPlugin(InertiaPlugin);
@@ -199,7 +199,7 @@ export default function HomePage() {
           <div className="stk sticker-image2"></div>
         </div>
         <div className="title">
-          <h1>Bán Chó Mèo Hoàn Hiểu</h1>
+          <h1>Bạn của mọi người</h1>
         </div>
       </div>
 

@@ -41,10 +41,10 @@ export default function Header() {
       </Link>
       <div className="header-nav">
         <ul>
-          <li>
+          <li className="nav-title">
             <Link to="/">Trang chủ</Link>
           </li>
-          <li>
+          <li className="nav-title">
             <span>Sản phẩm</span>
             <ul>
               <li>
@@ -55,7 +55,7 @@ export default function Header() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="nav-title">
             <span>Khác</span>
             <ul>
               <li>
