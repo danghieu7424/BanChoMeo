@@ -164,7 +164,7 @@ export default function ServicesPage() {
         order.price === pet.price
     );
     if (isDuplicate) {
-      alert("Sản phẩm đã có trong đơn hàng!");
+      toast.warning("Sản phẩm đã có trong đơn hàng!");
       return;
     }
     orders.push({
@@ -179,7 +179,7 @@ export default function ServicesPage() {
       orderedAt: new Date().toISOString(),
     });
     localStorage.setItem("orders", JSON.stringify(orders));
-    alert("Đã thêm vào đơn hàng!");
+    toast.success("Đã thêm vào đơn hàng!");
   };
 
   return (

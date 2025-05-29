@@ -34,7 +34,9 @@ const OrderPage = () => {
   );
 
   const handleCheckout = () => {
-    alert("Thanh toán thành công!");
+    localStorage.setItem("orders", JSON.stringify([]));
+    setItems([]);
+    toast.success("Thanh toán thành công!");
   };
 
   const handleDelete = (id) => {
