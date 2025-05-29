@@ -36,7 +36,9 @@ export default function Header() {
 
   return (
     <header>
-      <div className="header-logo"></div>
+      <Link to="/">
+        <div className="header-logo"></div>
+      </Link>
       <div className="header-nav">
         <ul>
           <li>
@@ -54,7 +56,7 @@ export default function Header() {
             </ul>
           </li>
           <li>
-            <span>Dịch vụ</span>
+            <span>Khác</span>
             <ul>
               <li>
                 <Link to="/services/dog">Cho chó</Link>

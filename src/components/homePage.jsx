@@ -64,21 +64,20 @@ const DogPet = [
 ];
 
 const DogService = [
-  { img: dogS1, name: "Dịch vụ 1", price: "500.000₫" },
-  { img: dogS2, name: "Dịch vụ 2", price: "600.000₫" },
-  { img: dogS3, name: "Dịch vụ 3", price: "700.000₫" },
-  { img: dogS4, name: "Dịch vụ 4", price: "800.000₫" },
-  { img: dogS5, name: "Dịch vụ 5", price: "900.000₫" },
+  { img: dogS1, name: "Dầu tắm", price: "500.000₫" },
+  { img: dogS2, name: "Dầu thơm", price: "600.000₫" },
+  { img: dogS3, name: "Sữa tắm", price: "700.000₫" },
+  { img: dogS4, name: "Xúc xích", price: "200.000₫" },
+  { img: dogS5, name: "Cát", price: "900.000₫" },
 ];
 
 const CatService = [
-  { img: catS1, name: "Dịch vụ 1", price: "500.000₫" },
-  { img: catS2, name: "Dịch vụ 2", price: "600.000₫" },
-  { img: catS3, name: "Dịch vụ 3", price: "700.000₫" },
-  { img: catS4, name: "Dịch vụ 4", price: "800.000₫" },
-  { img: catS5, name: "Dịch vụ 5", price: "900.000₫" },
+  { img: catS1, name: "Cát", price: "500.000₫" },
+  { img: catS2, name: "Cát", price: "600.000₫" },
+  { img: catS3, name: "Cát gỗ", price: "700.000₫" },
+  { img: catS4, name: "Cát gỗ", price: "800.000₫" },
+  { img: catS5, name: "Xẻng xúc phân", price: "100.000₫" },
 ];
-
 gsap.registerPlugin(InertiaPlugin);
 
 function StickerEffect() {
@@ -158,6 +157,38 @@ function StickerEffect() {
 }
 
 export default function HomePage() {
+  const handleOrder = (pet, type) => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Vui lòng đăng nhập để đặt hàng.");
+      window.location.href = "/login";
+      return;
+    }
+    const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+    const isDuplicate = orders.some(
+      (order) =>
+        order.id === pet.id &&
+        order.name === pet.name &&
+        order.price === pet.price
+    );
+    if (isDuplicate) {
+      alert("Sản phẩm đã có trong đơn hàng!");
+      return;
+    }
+    orders.push({
+      ...pet,
+      id:
+        pet.id ||
+        `${type || "other"}-${pet.name}-${pet.price || ""}-${Math.random()
+          .toString(36)
+          .substr(2, 9)}`,
+      type,
+      quantity: 1,
+      orderedAt: new Date().toISOString(),
+    });
+    localStorage.setItem("orders", JSON.stringify(orders));
+    alert("Đã thêm vào đơn hàng!");
+  };
   return (
     <div className="page-container home-page">
       <div className="home-page-banner">
@@ -194,7 +225,12 @@ export default function HomePage() {
                   </div>
                   <div className="product-name">{pet.name}</div>
                   <div className="product-price">{pet.price}</div>
-                  <button className="product-button">Đặt hàng</button>
+                  <button
+                    className="product-button"
+                    onClick={() => handleOrder(pet, "cat")}
+                  >
+                    Đặt hàng
+                  </button>
                 </div>
               </li>
             ))}
@@ -231,7 +267,12 @@ export default function HomePage() {
                   </div>
                   <div className="product-name">{pet.name}</div>
                   <div className="product-price">{pet.price}</div>
-                  <button className="product-button">Đặt hàng</button>
+                  <button
+                    className="product-button"
+                    onClick={() => handleOrder(pet, "dog")}
+                  >
+                    Đặt hàng
+                  </button>
                 </div>
               </li>
             ))}
@@ -268,7 +309,12 @@ export default function HomePage() {
                   </div>
                   <div className="product-name">{pet.name}</div>
                   <div className="product-price">{pet.price}</div>
-                  <button className="product-button">Đặt hàng</button>
+                  <button
+                    className="product-button"
+                    onClick={() => handleOrder(pet, "cat")}
+                  >
+                    Đặt hàng
+                  </button>
                 </div>
               </li>
             ))}
@@ -305,7 +351,12 @@ export default function HomePage() {
                   </div>
                   <div className="product-name">{pet.name}</div>
                   <div className="product-price">{pet.price}</div>
-                  <button className="product-button">Đặt hàng</button>
+                  <button
+                    className="product-button"
+                    onClick={() => handleOrder(pet, "dog")}
+                  >
+                    Đặt hàng
+                  </button>
                 </div>
               </li>
             ))}
