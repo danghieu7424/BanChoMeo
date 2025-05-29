@@ -158,7 +158,8 @@ function StickerEffect() {
 
 export default function HomePage() {
   const handleOrder = (pet, type) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("login_token");
+    console.log("Token:", token);
     if (!token) {
       alert("Vui lòng đăng nhập để đặt hàng.");
       window.location.href = "/login";

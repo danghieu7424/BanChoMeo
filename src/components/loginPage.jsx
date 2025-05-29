@@ -86,6 +86,7 @@ const LoginPage = () => {
         const data = JSON.parse(decode(token));
         if (data.username === FAKE_USER.username) {
           alert("Bạn đã đăng nhập!");
+          window.location.href = "/";
         }
       } catch {}
     }

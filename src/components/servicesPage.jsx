@@ -150,7 +150,7 @@ export default function ServicesPage() {
   }
 
   const handleOrder = (pet) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("login_token");
     if (!token) {
       alert("Vui lòng đăng nhập để đặt hàng.");
       window.location.href = "/login";

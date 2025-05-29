@@ -49,35 +49,43 @@ export default function ProductPage() {
   const { type } = useParams();
   const pets = type === "dog" ? DogPet : CatPet;
 
- 
-const handleOrder = (pet) => {
-    const token = localStorage.getItem("token");
+  const handleOrder = (pet) => {
+    const token = localStorage.getItem("login_token");
+    console.log("Token:", token);
     if (!token) {
-        alert("Vui lòng đăng nhập để đặt hàng.");
-        window.location.href = "/login";
-        return;
+      alert("Vui lòng đăng nhập để đặt hàng.");
+      window.location.href = "/login";
+      return;
     }
     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
     const isDuplicate = orders.some(
-        (order) => order.id === pet.id && order.name === pet.name && order.price === pet.price
+      (order) =>
+        order.id === pet.id &&
+        order.name === pet.name &&
+        order.price === pet.price
     );
     if (isDuplicate) {
-        alert("Sản phẩm đã có trong đơn hàng!");
-        return;
+      alert("Sản phẩm đã có trong đơn hàng!");
+      return;
     }
     orders.push({
-        ...pet,
-        id: pet.id || `${type || "other"}-${pet.name}-${pet.price || ""}-${Math.random().toString(36).substr(2, 9)}`,
-        type,
-        quantity: 1,
-        orderedAt: new Date().toISOString(),
+      ...pet,
+      id:
+        pet.id ||
+        `${type || "other"}-${pet.name}-${pet.price || ""}-${Math.random()
+          .toString(36)
+          .substr(2, 9)}`,
+      type,
+      quantity: 1,
+      orderedAt: new Date().toISOString(),
     });
     localStorage.setItem("orders", JSON.stringify(orders));
     alert("Đã thêm vào đơn hàng!");
-};
+  };
 
   return (
     <div className="page-container product-page">
+      ``
       <div className="content">
         <ul>
           {pets.map((pet, index) => (
